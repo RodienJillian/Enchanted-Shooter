@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles/style.css">
+        <link rel="stylesheet" href="styles/header.css">
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/footer.css">
+        <script src="scripts/script.js" defer></script>
+        <link rel="icon" type="image/x-icon" href="images/Logo.png">
+        <title>Enchanted Shooter</title>
+    </head>
+    <body>
+        <div id="responsive-container">
+            <header>
+                <div class="shine-effect"></div>
+                <img id="logo-img" src="images/Logo.png">
+                <h1 class="title"><span class="ES-title">Enchanted Shooter</span></h1>
+                <p class="description">In partial fulfillment of the requirements for Natural Language Processing</p>
+                <p class="description">Developed by Rey Arby Castro and Rodien Jillian Ellorando</p>
+
+            </header>
+            <main>
+                <h1>Introduction</h1>
+                <p>Enchanted Shooter is a bubble shooter–style lyric guessing game that uses an N-gram language model trained on Taylor Swift lyrics. Built with Svelte (frontend) and FastAPI (backend), the game combines interactive design and NLP to create an engaging educational + entertainment experience.</p>
+                
+                <h1>Gameplay Flow</h1>
+                    <p>1. Song Selection – Player chooses a Taylor Swift song.</p>
+                    <p>2. Difficulty Level – Choose between easy, medium, or hard (controls the lyric gaps and N-gram challenge).</p>
+                    <p>3. Game Start – 10 lyric questions per round.</p>
+                    <p>4. Hints – Up to 3 hints can be used (based on N-gram predictions).</p>
+                    <p>5. Scoring – Starts at 100 points.</p>
+                        <ul>
+                            <li>Correct Answer: Full points retained.</li>
+                            <li>Wrong Answer: -10 points each.</li>
+                            <li>Maximum score: 100, minimum: 0.</li>
+                        </ul>
+
+                <h1>Sample Screenshots</h1>
+                <div class="carousel">
+                    <div class="carousel-images">
+                        <img src="images/C1.png">
+                        <img src="images/C2.png">
+                        <img src="images/C3.png">
+                        <img src="images/C4.png">
+                        <img src="images/C5.png">
+                        <img src="images/C6.png">
+                    
+                    </div>
+                    <button class="prev"><</button>
+                    <button class="next">></button>
+                </div>
+
+                <h1>N-Gram Integration</h1>
+                    <ul>
+                        <li>Corpus: Taylor Swift lyrics.</li>
+                        <li>Function: Generates predictions for missing words based on N-gram frequencies.</li>
+                        <li>In-Game Role: Provides hints and influences difficulty.</li>
+                        <ul>
+                            <li>Example: If the lyric is “I knew you were ___”, the model predicts likely completions (e.g., “trouble”).</li>
+                        </ul>
+                    </ul>    
+
+                        
+
+                <h1>System Architecture</h1>
+                    <ul>
+                        <li>Frontend (Svelte) – Bubble shooter interface, lyric display, hint requests, score tracking.</li>
+                        <li>Backend (FastAPI + Python) – Hosts N-gram model, processes requests, returns predictions, and validates answers.</li>
+                        <li>Flow: Player input → API request → N-gram processing → Prediction/validation → Game update.</li>
+                    </ul>  
+
+                <h1>Features</h1>
+                    <ul>
+                        <li>Bubble shooter + lyric guessing combo.</li>
+                        <li>Difficulty levels that scale with N-gram complexity.</li>
+                        <li>Hint system powered by NLP predictions.</li>
+                        <li>Fair scoring with penalties for mistakes.</li>
+                    </ul>            
+            </main>
+            <footer>
+                Documented by <a>Rodien Jillian</a>
+            </footer>
+        </div>
+    </body>
+</html>
